@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <h1>Registration Form</h1>
+    <form id="registrationForm" onsubmit="return false;">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" required>
+        <span class="error" id="firstname-error"></span><br>
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" required>
+        <span class="error" id="lastname-error"></span><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+        <span class="error" id="dob-error"></span><br>
+
+        <label for="country">Country:</label>
+        <select id="country" required>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <!-- Add more countries here -->
+        </select>
+        <span class="error" id="country-error"></span><br>
+        <label>Gender:</label>
+        <div class="flex ">
+        <input class="custom-unset" type="radio" name="gender" value="Male" id="male" required>
+        <label class="custom-unset" for="male">Male</label>
+        </div>
+        <div class="flex">
+        <input class="custom-unset" type="radio" name="gender" value="Female" id="female">
+        <label class="custom-unset" for="female">Female</label>
+      </div>
+        </div>
+        <span class="error" id="gender-error"></span><br>
+
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" required>
+        <span class="error" id="profession-error"></span><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <span class="error" id="email-error"></span><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required>
+        <span class="error" id="phone-error"></span><br>
+
+        <button type="submit" onclick="submitForm()">Submit</button>
+        <button type="button" onclick="resetForm()">Reset</button>
+    </form>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Registration Details:</h2>
+          <p><strong>First Name:</strong> <span id="modalFirstname"></span></p>
+          <p><strong>Last Name:</strong> <span id="modalLastname"></span></p>
+          <p><strong>Date of Birth:</strong> <span id="modalDOB"></span></p>
+          <p><strong>Country:</strong> <span id="modalCountry"></span></p>
+          <p><strong>Gender:</strong> <span id="modalGender"></span></p>
+          <p><strong>Profession:</strong> <span id="modalProfession"></span></p>
+          <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+          <p><strong>Phone Number:</strong> <span id="modalPhone"></span></p>
+      </div>
+  </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
